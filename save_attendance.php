@@ -16,7 +16,7 @@ $class_id = isset($_GET['class_id']) ?  $_GET['class_id'] : null;
 	<style>
 		body	
 		{
-			background-image: url("picture/web.jpg");
+			background-image: url("picture/ground.jpg");
 			background-size: cover
 		}
 	</style>
@@ -85,11 +85,11 @@ $class_id = isset($_GET['class_id']) ?  $_GET['class_id'] : null;
         </div>
 	<div class="container">
 	
-		<button type="button" class="btn btn-primary" id="save_attendance">Save Attendance</button> 
+		 
 		<input type="hidden" id="class_id" value="<?php echo isset($_GET['class_id']) ? $_GET['class_id'] : null?>">
 		<div class="form-group">
 			<label for="time">Time</label>
-			<input type="text" class="form-control" id="time">
+			<input type="text" class="form-control" id="time" placeholder="Input Time"required>
 		</div>
 		<table  class="table">
 			<tr>
@@ -99,6 +99,7 @@ $class_id = isset($_GET['class_id']) ?  $_GET['class_id'] : null;
 			  <th>Middle Initial</th>
 			  <th>Name Extension</th> 
 			  <th>Status</th>
+			  <th><button type="button" class="btn btn-primary" id="save_attendance">View Attendance</button></th>
 			</tr>
 			<?php
 			$code = $_GET['class_id'];
