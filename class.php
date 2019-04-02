@@ -11,6 +11,9 @@ $conn = new mysqli ($host, $dbusername, $dbpassword, $dbname);
 $sql = "SELECT * FROM subject";
 $query1 = mysqli_query($conn,$sql);
 
+$sql1 = "SELECT * FROM class";
+$query2 = mysqli_query($conn,$sql1);
+
 ?>
 
 <!DOCTYPE html>
@@ -110,19 +113,25 @@ body  {
 					<input type="hidden" name="Class_ID" value="<?php echo $Class_ID?>">
 					<label>Section</label>
 					<input type="text" class="form-control" name="Section" placeholder="Section" value="<?php echo $Section; ?>" required ></td><br/>
+					
 					<label>Subject Code</label>
 					<select name="Subject_Code" class="form-control" required>
+					<option value="<?php echo $row['Subject_Code'] ?>"> <?php echo $row['Subject_Code'] ?></option>
 							<?php while ($row = mysqli_fetch_array($query1)): ?>
 						<option value="<?php echo $row['Subject_Code'] ?>"><?php echo $row['Subject_Title'] ?></option>
 							<?php endwhile;?>
-							<option value='' selected>Select Subject</option>
 							</select>
+							
 					<label>Semester</label>
-					<select name="Semester" class="form-control" value="" required>
+					<select name="Semester" class="form-control" required>
+							<?php while ($row = mysqli_fetch_array($query2)): ?>
+						<option value="<?php echo $row['Semester'] ?>"><?php echo $row['Semester'] ?></option>
+							<?php endwhile;?>
 							<option value="First Semester">First Semester</option>
 							<option value="Second Semester">Second Semester</option>
 							<option value="Summer">Summer</option>
 							</select>
+							
 					<label>Academic Year</label>
 					<input type="text" class="form-control"  name="Academic Year" placeholder="Academic Year" value="<?php echo $Academic_Year; ?>" required ></td><br/>
 					<label>Schedule Day</label>
