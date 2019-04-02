@@ -117,16 +117,12 @@ body  {
 					<label>Subject Code</label>
 					<select name="Subject_Code" class="form-control" required>
 					<option value="<?php echo $row['Subject_Code'] ?>"> <?php echo $row['Subject_Code'] ?></option>
-							<?php while ($row = mysqli_fetch_array($query1)): ?>
-						<option value="<?php echo $row['Subject_Code'] ?>"><?php echo $row['Subject_Title'] ?></option>
-							<?php endwhile;?>
-							</select>
-							
+					
+					</select>	
+					
 					<label>Semester</label>
 					<select name="Semester" class="form-control" required>
-							<?php while ($row = mysqli_fetch_array($query2)): ?>
-						<option value="<?php echo $row['Semester'] ?>"><?php echo $row['Semester'] ?></option>
-							<?php endwhile;?>
+					<option value="<?php echo $row['Semester'] ?>"> <?php echo $row['Semester'] ?></option>
 							<option value="First Semester">First Semester</option>
 							<option value="Second Semester">Second Semester</option>
 							<option value="Summer">Summer</option>
@@ -146,7 +142,7 @@ body  {
 				<?php else: ?>
 					<button class="btn btn-info" type="submit" name="class">Save</button>&nbsp;&nbsp;
 				<?php endif; ?>
-				<a href="classview.php"><button type="submit"class="btn btn-info" >View</a></button>			
+				<a href="classview.php"><button type="submit"class="btn btn-info" >View</a></button>				
 
 </center>
 </form>
