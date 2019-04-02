@@ -123,7 +123,7 @@ body  {
 	  <th>Academic Year</th>
 	  <th>Schedule Day</th>
       <th>Schedule Time</th>
-	  <th><a href="class.php" button type="button" class="btn btn-primary">Add Class</a></button></th>
+	  <th><a href="classadd.php" button type="button" class="btn btn-primary">Add Class</a></button></th>
     </tr>
   </thead>
  
