@@ -2,7 +2,8 @@
 <html>
 <style>
 body{
-  background-image: url("picture/ground.jpg");  
+  background-image: url("picture/ground.jpg");
+  background-size: cover;
   }
 </style>
    <head>
