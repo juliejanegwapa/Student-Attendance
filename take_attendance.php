@@ -136,7 +136,7 @@ body	{
 		
 	 <td>
 	 <a href ="save_attendance.php?class_id=<?php echo $row['Class_ID'];?>"><button type="button" class="btn btn-danger">Take</button></a></td>
-
+	<a href ="takeview.php?class_id=<?php echo $row['Class_ID'];?>"><button type="button" class="btn btn-danger">View</button></a></td>
 </td>
 
 </tr>
